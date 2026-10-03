@@ -30,8 +30,7 @@ def moveShape(userInput, Size, Direction,CrankShaft):
             dt.drive_for(CrankShaft,Size, MM)
             dt.turn_for(Direction,120, DEGREES)
     elif userInput == "Circle":
-        dt.drive_for(CrankShaft,Size, MM)
-        dt.turn_for(Direction,360, DEGREES)
+        lm.spin_for(CrankShaft, 360, DEGREES) and rm.spin_for(CrankShaft, 180, DEGREES) # pyright: ignore[reportUnusedExpression]
     elif userInput == "Rectangle":
         for i in range(2):
             dt.drive_for(CrankShaft,Size, MM)
